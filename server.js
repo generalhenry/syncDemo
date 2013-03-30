@@ -14,6 +14,6 @@ setInterval(function () {
 }, 1000);
 
 var sock = shoe(function (stream) {
-    model.createStream().pipe(stream);
+   stream.pipe(model.createStream()).pipe(stream);
 });
 sock.install(server, '/sync');
